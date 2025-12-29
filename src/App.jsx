@@ -47,7 +47,7 @@ function App() {
   }
 
   return (
-    <div style={{ padding: "2rem" }}>
+    <div className="app">
       <h1>🎂 Mission Anniversaire 🎂</h1>
 
       <Enigme
