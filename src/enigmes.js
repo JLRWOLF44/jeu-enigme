@@ -5,6 +5,12 @@ const enigmes = [
   },
 
   {
+    question: "Ma maison est le lion, mais on m’a traité comme un monstre.\nMon esprit est une flamme vive, plus tranchant qu’aucune épée.\nJe n’ai jamais porté la couronne, pourtant j’ai tenu des trônes dans l’ombre.\nJ’ai aimé des reines et des ombres, mais le destin m’a maudit dès la naissance.\nMon nom évoque la sagesse ancienne, et j’ai tué mon père par vengeance.\nQui suis-je, moi dont la taille est petite, mais le cœur et l’intelligence immenses ?",
+    reponse: "tyrion lannister"
+  },
+
+
+  {
     question: "Je perds un œil pour gagner la sagesse. Je règne sur Asgard. Qui suis-je ?",
     reponse: "odin"
   },
@@ -63,7 +69,7 @@ const enigmes = [
   },
 
   {
-    question: "Je suis le loup géant de la famille Stark. Quel est mon nom ?",
+    question: "Je suis le loup géant de la famille Stark.Je protège les enfants du Nord. Ma fourrure est blanche comme l'hiver, et mes yeux rouges voient tout. Quel est mon nom ? Quel est mon nom ?",
     reponse: "fantome"
   },
 
@@ -159,6 +165,9 @@ const enigmes = [
   {question: "Quel jour est ton anniversaire ? (en chiffres)",
     reponse: "3"
   },
+
+ 
+  
 ];
 
 export default enigmes;

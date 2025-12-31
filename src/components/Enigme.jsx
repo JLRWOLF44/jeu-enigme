@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Enigme.css"; // Importez le fichier CSS
 
 function Enigme({ data, onSuccess, onSkip }) {
   const [answer, setAnswer] = useState("");
@@ -23,29 +24,37 @@ function Enigme({ data, onSuccess, onSkip }) {
   };
 
   return (
-    <div>
+    <div className="enigme-container">
       <h2>{data.question}</h2>
 
       <input
+        className="answer-input"
         value={answer}
         onChange={(e) => setAnswer(e.target.value)}
         placeholder="Ta réponse..."
         disabled={tries === 0}
       />
 
-      <div style={{ marginTop: "1rem" }}>
-        <button onClick={verifier} disabled={tries === 0}>
+      <div className="button-container">
+        <button
+          className="validate-button"
+          onClick={verifier}
+          disabled={tries === 0}
+        >
           Valider
         </button>
 
         {tries === 0 && (
-          <button onClick={onSkip} style={{ marginLeft: "1rem" }}>
+          <button
+            className="skip-button"
+            onClick={onSkip}
+          >
             Passer 🔁
           </button>
         )}
       </div>
 
-      {error && <p>{error}</p>}
+      {error && <p className="error-message">{error}</p>}
     </div>
   );
 }

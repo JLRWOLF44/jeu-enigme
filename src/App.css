@@ -1,42 +1,106 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: white;
+}
+
+/* Fond viking */
+.screen {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("/viking-bg.jpg"); /* doit être dans public/ */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
+  position: relative;
+}
+
+.screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.panel {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.85);
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.panel h1 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
 }
 
-@keyframes logo-spin {
+.finale {
+  max-width: 600px;
+  width: 100%;
+  padding: 2.5rem;
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+  animation: apparition 1.2s ease-out;
+}
+
+.finale h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.finale p {
+  line-height: 1.8;
+  font-size: 1.5rem;
+}
+
+@keyframes apparition {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(30px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Responsive */
+@media (max-width: 768px) {
+  .panel {
+    padding: 1.5rem;
+    background: rgba(15, 15, 15, 0.92);
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .panel h1 {
+    font-size: 1.5rem;
+  }
+  .finale h2 {
+    font-size: 1.8rem;
+  }
+  .finale p {
+    font-size: 1.3rem;
+  }
 }

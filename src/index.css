@@ -7,23 +7,28 @@
 }
 
 /* Fond général */
-body {
-  min-height: 100vh;
+html, body {
   margin: 0;
-  background-image: url("/viking-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #f5f5f5;
+  padding: 0;
+  min-height: 100vh;
+  background: transparent;
+  color: white;
 }
+
 
 /* Conteneur principal */
 .app {
   min-height: 100vh;
-  background: rgba(0, 0, 0, 0.55); /* voile sombre */
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
   padding: 2rem;
 }
+
 
 /* Carte énigme */
 .enigme {
@@ -78,4 +83,57 @@ button:disabled {
 p {
   margin-top: 1rem;
   text-align: center;
+}
+.finale {
+  max-width: 600px;
+  width: 100%;
+  padding: 2.5rem;
+
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 16px;
+  text-align: center;
+
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+}
+.finale h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.finale p {
+  line-height: 1.6;
+  font-size: 1.5rem;
+}
+
+
+/* Style pour les écrans mobiles */
+@media (max-width: 768px) {
+  body {
+    background-size: contain;
+    background-attachment: scroll;
+    font-size: 0.9rem; /* Réduit légèrement la taille de la police */
+  }
+
+  .enigme-container {
+    width: 95%; /* Prend presque toute la largeur de l'écran */
+    padding: 0.5rem;
+  }
+
+  .answer-input {
+    width: 90%; /* La case de réponse prend presque toute la largeur */
+  }
+}
+.finale {
+  animation: apparition 1.2s ease-out;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
