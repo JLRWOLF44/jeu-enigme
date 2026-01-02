@@ -16,16 +16,27 @@ Un jeu d'énigmes personnalisé créé pour l'anniversaire d'un ami légendaire.
 ### 🚀 Comment jouer
 1. Ouvre le lien : [https://jeu-enigme.vercel.app]
 2. Clique sur **JOUER**
-3. Résous les énigmes, résiste à la tentation de skipper trop 😈
-4. Atteins la fin pour découvrir la surprise...
+3. Résous les énigmes (3 essais max)
+4. Skippe si trop dur (tu pourras revenir)
+5. **Progrès sauvegardé automatiquement** – reprend là où tu t'es arrêté
+6. Atteins la fin pour la récompense...
+
 
 ### 🛠️ Technos utilisées
 - React + Vite
 - CSS pur (pas de framework pour garder ça léger)
 - Hébergé sur GitHub Pages / Vercel / 
 
+## ✨ Fonctionnalités
+- Accueil avec portrait IA personnalisé
+- 4 fonds vikings qui changent tous les 10 succès
+- Barre de progression (seulement bonnes réponses)
+- Sauvegarde auto (localStorage)
+- Mobile first (parfait téléphone/tablette)
+- Message "Bienvenue de retour" magique
+
 ### ❤️ Crédits
-- Créé avec amour (et beaucoup de café) par [Ton Prénom]
+- Créé avec amour (et beaucoup de café) par Jean-louis
 - Portrait viking généré par IA (base : photo réelle + magie nordique)
 - Images de fond : sources libres / générées IA
 - Inspiration : les vraies soirées entre potes et les sagas qui nous font vibrer
