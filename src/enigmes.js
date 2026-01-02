@@ -310,7 +310,129 @@ const enigmes = [
   {
     question: "Je suis le nombre d'Anneaux du Poucret forgés pour les Elfes. Combien ?",
     reponse: "3"
+  },
+
+  {
+    question: "Je suis le géant de métal qui défend Winterfell, immobile mais vigilant. Qui suis-je ?",
+    reponse: "geant"
+  },
+  {
+    question: "Dans Harry Potter, je suis le garçon à l'éclair sur le front. Qui suis-je ?",
+    reponse: "harry"
+  },
+  {
+    question: "Je suis la bête mythique qui crache du feu et protège les trésors. Qui suis-je ?",
+    reponse: "dragon"
+  },
+  {
+    question: "Je suis l'épée cachée dans un étang, donnée à Arthur par la Dame du Lac. Qui suis-je ?",
+    reponse: "excalibur"
+  },
+  {
+    question: "Je suis le roi déchu devenu spectre, cherchant mon héritier. Qui suis-je ?",
+    reponse: "aragorn"
+  },
+  {
+    question: "Je suis la planète rouge, terre des Sables dans Star Wars. Qui suis-je ?",
+    reponse: "jedha"
+  },
+  {
+    question: "Je suis la créature à trois yeux, voyant passé, présent et futur. Qui suis-je ?",
+    reponse: "raven"
+  },
+  {
+    question: "Je suis le forgeron qui a créé l'épée Narsil. Qui suis-je ?",
+    reponse: "telchar"
+  },
+  {
+    question: "Je suis l'ordre de chevaliers Jedi qui maintient la paix dans la galaxie. Qui sommes-nous ?",
+    reponse: "jedi"
+  },
+  {
+    question: "Je suis le loup-garron qui protège Bran Stark au-delà du Mur. Qui suis-je ?",
+    reponse: "summer"
+  },
+  {
+    question: "Je suis la cité flottante des dieux dans la mythologie grecque. Qui suis-je ?",
+    reponse: "olympe"
+  },
+  {
+    question: "Je suis le métal précieux convoité par les nains dans la Terre du Milieu. Qui suis-je ?",
+    reponse: "mithril"
+  },
+  {
+    question: "Je suis le chevalier sans tête qui hante la forêt de Sleepy Hollow. Qui suis-je ?",
+    reponse: "hessian"
+  },
+  {
+    question: "Je suis la princesse guerrière des Amazones, fille d'Hippolyte. Qui suis-je ?",
+    reponse: "diane"
+  },
+  {
+    question: "Je suis l'arme du dieu Thor, marteau qui ne rate jamais sa cible. Qui suis-je ?",
+    reponse: "mjolnir"
+  },
+  {
+    question: "Je suis le dragon blanc qui terrorise le Nord dans Game of Thrones. Qui suis-je ?",
+    reponse: "viserion"
+  },
+  {
+    question: "Je suis la planète des forêts et des Ewoks dans Star Wars. Qui suis-je ?",
+    reponse: "endor"
+  },
+  {
+    question: "Je suis le frère de Cersei, amoureux de sa sœur jumelle. Qui suis-je ?",
+    reponse: "jaime"
+  },
+  {
+    question: "Je suis la créature marine géante qui attaque les navires vikings. Qui suis-je ?",
+    reponse: "kraken"
+  },
+  {
+    question: "Je suis le droïde de combat rouge de l'Empire dans Star Wars. Qui suis-je ?",
+    reponse: "k2so"
+  },
+  {
+    question: "Je suis la forteresse des Greyjoy, bâtie sur un rocher marin. Qui suis-je ?",
+    reponse: "pyke"
+  },
+  {
+    question: "Je suis le dieu de la guerre romain, équivalent de Arès. Qui suis-je ?",
+    reponse: "mars"
+  },
+  {
+    question: "Je suis l'épouse de Ragnar Lothbrok, célèbre shieldmaiden. Qui suis-je ?",
+    reponse: "lagertha"
+  },
+  {
+    question: "Je suis la capitale du Royaume des Sept Couronnes. Qui suis-je ?",
+    reponse: "port"
+  },
+  {
+    question: "Je suis le chevalier en armure blanche, protecteur de la princesse. Qui suis-je ?",
+    reponse: "brienne"
+  },
+  {
+    question: "Je suis l'île où sont formés les Jedi avant leur purge. Qui suis-je ?",
+    reponse: "ilum"
+  },
+  {
+    question: "Je suis le roi des morts, commandant l'armée des spectres. Qui suis-je ?",
+    reponse: "night"
+  },
+  {
+    question: "Je suis la sorcière qui ensorcelle les marins avec sa voix. Qui suis-je ?",
+    reponse: "sirène"
+  },
+  {
+    question: "Je suis le vaisseau de Kylo Ren, plus grand que le Faucon Millenium. Qui suis-je ?",
+    reponse: "silencer"
+  },
+  {
+    question: "Je suis la déesse de la chasse dans la mythologie grecque. Qui suis-je ?",
+    reponse: "artemis"
   }
+
 ];
 
 export default enigmes;

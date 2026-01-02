@@ -7,21 +7,27 @@ function Enigme({ data, onSuccess, onSkip }) {
   const [error, setError] = useState("");
 
   const verifier = () => {
-    if (answer.toLowerCase().trim() === data.reponse) {
-      setAnswer("");
-      setTries(3);
-      setError("");
-      onSuccess();
-    } else {
-      const remaining = tries - 1;
-      setTries(remaining);
-      setError(`❌ Mauvaise réponse (${remaining} essais restants)`);
+  const reponseNormalisee = answer.toLowerCase().trim();
+  const bonneReponse = data.reponse.toLowerCase().trim();
 
-      if (remaining === 0) {
-        setError("⛔ Plus d’essais possibles");
-      }
+  if (reponseNormalisee === bonneReponse) {
+    // Bonne réponse
+    setAnswer("");          // Vide le champ
+    setTries(3);            // Réinitialise les essais
+    setError("");           // Efface l'erreur
+    onSuccess();
+  } else {
+    // Mauvaise réponse
+    const remaining = tries - 1;
+    setTries(remaining);
+    setAnswer("");          // ← Vide le champ automatiquement
+    setError(`❌ Mauvaise réponse (${remaining} essai${remaining > 1 ? 's' : ''} restant${remaining > 1 ? 's' : ''})`);
+
+    if (remaining === 0) {
+      setError("⛔ Plus d’essais – passe à la suivante !");
     }
-  };
+  }
+};
 
   return (
     <div className="enigme-container">
