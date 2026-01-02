@@ -1,16 +1,39 @@
-# React + Vite
+# Les Énigmes de Flóki dit "Le Roux" ⚔️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un jeu d'énigmes personnalisé créé pour l'anniversaire d'un ami légendaire.
 
-Currently, two official plugins are available:
+À 40 ans, il mérite une quête digne des sagas nordiques : énigmes corsées, ambiance viking immersive, et une surprise finale qui touche en plein cœur.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🎮 Fonctionnalités
+- **Intro épique** avec Flóki le Roux (portrait personnalisé IA) qui défie le joueur
+- Énigmes progressives avec 3 essais par question
+- Possibilité de passer (skip) et revenir plus tard sur les énigmes manquées
+- **Barre de progression** qui n'avance que sur les bonnes réponses
+- **Fonds vikings** qui changent au fil des succès (tous les 10)
+- Bouton "Rejouer" à tout moment
+- **Écran final solennel** avec message d'anniversaire personnalisé
 
-## React Compiler
+### 🚀 Comment jouer
+1. Ouvre le lien : [https://jeu-enigme.vercel.app]
+2. Clique sur **JOUER**
+3. Résous les énigmes, résiste à la tentation de skipper trop 😈
+4. Atteins la fin pour découvrir la surprise...
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🛠️ Technos utilisées
+- React + Vite
+- CSS pur (pas de framework pour garder ça léger)
+- Hébergé sur GitHub Pages / Vercel / 
 
-## Expanding the ESLint configuration
+### ❤️ Crédits
+- Créé avec amour (et beaucoup de café) par [Ton Prénom]
+- Portrait viking généré par IA (base : photo réelle + magie nordique)
+- Images de fond : sources libres / générées IA
+- Inspiration : les vraies soirées entre potes et les sagas qui nous font vibrer
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> *« À 40 ans, Odin t’accorde sa sagesse, les Elfes leur respect, la Force te traverse, et le bois te reconnaît comme Maître. »*
+
+**Joyeux anniversaire, frère de bataille !** 🎂⚔️
+
+---
+
+*Ce projet est privé et fait main. Pas de copie, que de l’amitié.*

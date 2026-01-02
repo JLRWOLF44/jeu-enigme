@@ -33,7 +33,7 @@ html, body, #root {
   position: relative;
 }
 
-/* Voile sombre léger */
+
 .screen::before {
   content: "";
   position: absolute;
@@ -42,7 +42,7 @@ html, body, #root {
   z-index: 0;
 }
 
-/* Desktop : immersion totale */
+
 @media (min-width: 1024px) {
   .screen {
     background-size: cover;
@@ -179,13 +179,15 @@ html, body, #root {
   min-height: 100vh;
   width: 100%;
   background-image: url("/floki-viking.jpg");
-  background-size: contain;      /* mobile */
+  background-size: cover;      /* mobile */
   background-position: center top;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  padding-bottom: 8vh;
+  padding-bottom: 10vh;
   position: relative;
 }
 
@@ -201,7 +203,7 @@ html, body, #root {
 @media (min-width: 1024px) {
   .home-screen {
     background-size: cover;
-    background-position: center 10%;
+    background-position: center 40%;
   }
 }
 
@@ -279,5 +281,42 @@ html, body, #root {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+/* ============================= */
+/* STOCKAGE RESULTAT */
+/* ============================= */
+.welcome-back {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  border: 3px solid #d4af37;
+  color: #d4af37;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
+  z-index: 20;
+  animation: fadeInOut 4s forwards;
+  pointer-events: none; /* Pour ne pas bloquer les clics dessous */
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+  15% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Mobile : un peu plus petit */
+@media (max-width: 768px) {
+  .welcome-back {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    top: 10px;
   }
 }

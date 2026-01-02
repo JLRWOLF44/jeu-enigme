@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react"; 
 import enigmes from "./enigmes";
 import Enigme from "./components/Enigme";
 import "./App.css";
@@ -7,14 +7,15 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [skipped, setSkipped] = useState([]);
   const [successfulCount, setSuccessfulCount] = useState(0);
-  const [showHome, setShowHome] = useState(true); // Écran d'accueil au démarrage
+  const [showHome, setShowHome] = useState(true);
+  const [isReturning, setIsReturning] = useState(false);
 
   const enigmeCourante = enigmes[currentIndex];
 
   const progress = successfulCount;
   const totalEnigmes = enigmes.length;
 
-  // Changement de fond tous les 10 succès (ajuste si besoin)
+  // Fond qui change tous les 10 succès
   const backgroundIndex = Math.floor(progress / 10) % 4 + 1;
   const backgroundUrl = `/viking-bg${backgroundIndex}.jpg`;
 
@@ -32,21 +33,50 @@ function App() {
     setCurrentIndex(0);
     setSkipped([]);
     setSuccessfulCount(0);
+    localStorage.removeItem("vikingQuestProgress"); 
   };
 
-  // =============== RENDER ===============
+  // Chargement de la sauvegarde au démarrage
+  useEffect(() => {
+    const saved = localStorage.getItem("vikingQuestProgress");
+    if (saved) {
+      const data = JSON.parse(saved);
+      setCurrentIndex(data.currentIndex || 0);
+      setSkipped(data.skipped || []);
+      setSuccessfulCount(data.successfulCount || 0);
+      setShowHome(true);
+      setIsReturning(true);
+      setTimeout(() => setIsReturning(false), 5000); 
+    }
+  }, []);
+
+  // Sauvegarde automatique à chaque changement
+  useEffect(() => {
+    if (!showHome) { 
+      const data = {
+        currentIndex,
+        skipped,
+        successfulCount,
+      };
+      localStorage.setItem("vikingQuestProgress", JSON.stringify(data));
+    }
+  }, [currentIndex, skipped, successfulCount, showHome]);
+
+  // ================== ACCUEIL ==================
   if (showHome) {
-    // Page d'accueil
     return (
       <div className="home-screen">
         <div className="home-overlay">
+          {isReturning && (
+            <div className="welcome-back">
+              🛡️ Bienvenue de retour, guerrier !<br />
+              Ta quête reprend là où tu l'as laissée.
+            </div>
+          )}
 
           <h1>Je suis Flóki dit "Le Roux"</h1>
           <h2>Viens me défier dans mes énigmes !</h2>
-          <button
-            className="start-button"
-            onClick={() => setShowHome(false)}
-          >
+          <button className="start-button" onClick={() => setShowHome(false)}>
             JOUER ⚔️
           </button>
         </div>
@@ -54,10 +84,9 @@ function App() {
     );
   }
 
-  // Jeu terminé
+  // ================== FIN DU JEU ==================
   if (currentIndex >= enigmes.length) {
     if (skipped.length > 0) {
-      // Énigmes restantes (skipped)
       return (
         <div className="screen" style={{ backgroundImage: `url(${backgroundUrl})` }}>
           <div className="game-container">
@@ -75,7 +104,6 @@ function App() {
       );
     }
 
-    // Écran final anniversaire
     return (
       <div className="screen" style={{ backgroundImage: `url(${backgroundUrl})` }}>
         <div className="panel finale">
@@ -92,10 +120,12 @@ function App() {
     );
   }
 
-  // Jeu normal
+  // ================== JEU NORMAL ==================
   return (
     <div className="screen" style={{ backgroundImage: `url(${backgroundUrl})` }}>
       <div className="game-container">
+        
+
         <h1>Les énigmes de Flóki dit "Le Roux"</h1>
 
         <div className="progress-bar-container">

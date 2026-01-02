@@ -106,21 +106,21 @@ p {
 }
 
 
-/* Style pour les écrans mobiles */
+/* Styleécrans mobiles */
 @media (max-width: 768px) {
   body {
     background-size: contain;
     background-attachment: scroll;
-    font-size: 0.9rem; /* Réduit légèrement la taille de la police */
+    font-size: 0.9rem; 
   }
 
   .enigme-container {
-    width: 95%; /* Prend presque toute la largeur de l'écran */
+    width: 95%; 
     padding: 0.5rem;
   }
 
   .answer-input {
-    width: 90%; /* La case de réponse prend presque toute la largeur */
+    width: 90%; 
   }
 }
 .finale {
